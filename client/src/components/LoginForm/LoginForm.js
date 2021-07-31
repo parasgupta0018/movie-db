@@ -36,8 +36,6 @@ function LoginForm(props) {
             .then(function (response) {
                 console.log(response)
                 if(response.status === 200){
-
-                    axios.get
                     setState(prevState => ({
                         ...prevState,
                         'successMessage' : 'Login successful. Redirecting to home page..'

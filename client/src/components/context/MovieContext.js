@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
-export const MovieContext = createContext();
 import axios from 'axios';
+
+export const MovieContext = createContext();
 
 const API_KEY = 'e7c637c3';
 

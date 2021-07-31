@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-// import { ACCESS_TOKEN_NAME } from '../../constants/apiConstants';
 function Header(props) {
     const capitalize = (s) => {
         if (typeof s !== 'string') return ''
@@ -34,10 +33,8 @@ function Header(props) {
     return(
         <nav className="navbar navbar-dark bg-dark">
               <div className="container-fluid">
-                {/* <div className="row col-12 d-flex justify-content-center text-white"> */}
                 <a className="navbar-brand" href="#"><span className="h3">{props.title || title}</span></a>
                 {renderLogout()}
-                {/* </div> */}
             </div>
         </nav>
     )

@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-// import routes
 const authRoute = require('./routes/auth');
 const favRoute = require('./routes/fav');
 const cors = require('cors');
@@ -10,7 +9,6 @@ const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 app.use(cors());
-// connect to db
 mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECT, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -19,9 +17,8 @@ mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECT, {
   .catch(error => console.log(error.message));
   
 
-// middleware
+// 
 app.use(express.json());
-// route middlewares
 app.use('/server', authRoute);
 app.use('/fav', favRoute);
 

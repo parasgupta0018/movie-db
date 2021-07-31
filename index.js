@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECT, {
 // middleware
 app.use(express.json());
 // route middlewares
-app.use('/server/', authRoute);
+app.use('/server', authRoute);
 app.use('/fav', favRoute);
 
 if(process.env.NODE_ENV === 'production'){

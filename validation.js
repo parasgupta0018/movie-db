@@ -1,7 +1,5 @@
-// validation
 const Joi = require('joi');
 
-// register validation
 const registerValidation = (data) => {
   const schema = Joi.object({
     name: Joi.string()
@@ -15,11 +13,9 @@ const registerValidation = (data) => {
       .min(2)
       .required()
   });
-  // validate data
   return schema.validate(data);
 };
 
-// login validation
 const loginValidation = data => {
   const schema = Joi.object({
     email: Joi.string()
@@ -30,7 +26,6 @@ const loginValidation = data => {
       .min(2)
       .required(),
   });
-  // validate data
   return schema.validate(data);
 };
 

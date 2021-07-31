@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './RegistrationForm.css';
-// import {API_BASE_URL, ACCESS_TOKEN_NAME} from '../../constants/apiConstants';
 import { withRouter } from "react-router-dom";
 
 function RegistrationForm(props) {
@@ -35,7 +34,6 @@ function RegistrationForm(props) {
                 "email": state.email,
                 "password": state.password,
             }
-            // console.log(JSON.stringify(payload));
             axios.post('https://moviedbmernapp.herokuapp.com/server/register', payload)
                 .then(function (response) {
                     console.log(response);

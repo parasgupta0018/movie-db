@@ -1,0 +1,122 @@
+/* new css for movie component */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .App-header h2 {
+    margin: 0;
+  }
+  
+  .add-movies {
+    text-align: center;
+  }
+  
+  .add-movies button {
+    font-size: 16px;
+    padding: 8px;
+    margin: 0 10px 30px 10px;
+  }
+  
+  .movie {
+    padding: 5px 25px 10px 25px;
+    max-width: 25%;
+  }
+  
+  .errorMessage {
+    margin: auto;
+    font-weight: bold;
+    color: rgb(161, 15, 15);
+    font-size: 1.4rem;
+  }
+  
+  
+  .search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #282c34;
+    color: antiquewhite;
+  }
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 13rem;
+    height: 18rem;
+    margin: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+  .movie-card .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff700;
+  }
+  .movie-card img {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 15rem;
+    max-height: 530px;
+  }
+  .movie-card .info {
+    flex: 1;
+    display: flex;
+    font-size:1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .movie-card .info .title {
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 93%;
+  }
+  .movie-card .info .year {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  
+  .search > input[type="text"]{
+    width: 40%;
+    min-width: 170px;
+  }
+  
+  @media screen and (min-width: 694px) and (max-width: 915px) {
+    .movie {
+      max-width: 33%;
+    }
+  }
+  
+  @media screen and (min-width: 652px) and (max-width: 693px) {
+    .movie {
+      max-width: 50%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 651px) {
+    .movie {
+      max-width: 100%;
+      margin: auto;
+    }
+  }

@@ -21,7 +21,7 @@ const MovieApp = ({ children }) => {
     const payload={
       "id": userinfo.id
     }
-    axios.post('http://localhost:5000/fav/getFav', payload)
+    axios.post('https://moviedbmernapp.herokuapp.com/fav/getFav', payload)
     .then(function (response) {
       setFavorites(response.data.favourites);
     })
@@ -38,7 +38,7 @@ const MovieApp = ({ children }) => {
     );
     setFavorites(newFavoriteList);
     let remPayload = {"id": userinfo.id, "imdbID": movie.imdbID};
-    axios.post('http://localhost:5000/fav/remFav',remPayload)
+    axios.post('https://moviedbmernapp.herokuapp.com/fav/remFav',remPayload)
     .then((response) => {
       // console.log(response);
     })
@@ -50,7 +50,7 @@ const MovieApp = ({ children }) => {
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
     let postPayload = {"id": userinfo.id, "movie": movie};
-    axios.post('http://localhost:5000/fav/postFav',postPayload)
+    axios.post('https://moviedbmernapp.herokuapp.com/fav/postFav',postPayload)
     .then((response) => {
       // console.log(response);
     })

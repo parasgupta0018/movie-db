@@ -32,7 +32,7 @@ function LoginForm(props) {
             "email":state.email,
             "password":state.password,
         }
-        axios.post('http://localhost:5000/login', payload)
+        axios.post('https://moviedbmernapp.herokuapp.com/server/login', payload)
             .then(function (response) {
                 console.log(response)
                 if(response.status === 200){

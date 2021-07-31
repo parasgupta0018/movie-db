@@ -36,7 +36,7 @@ function RegistrationForm(props) {
                 "password": state.password,
             }
             // console.log(JSON.stringify(payload));
-            axios.post('http://localhost:5000/register', payload)
+            axios.post('https://moviedbmernapp.herokuapp.com/server/register', payload)
                 .then(function (response) {
                     console.log(response);
                     if(response.status === 200){
